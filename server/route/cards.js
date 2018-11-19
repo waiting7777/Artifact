@@ -34,7 +34,7 @@ function getCardSet(url) {
 }
 
 router.get('/api/cards', async (req, res, next) => {
-  const result = await getCardUrl('00');
+  const result = await getCardUrl('01');
   const url = `${result.cdn_root.slice(0, -1)}${result.url}`;
   console.log(url)
   const data = await getCardSet(url);
